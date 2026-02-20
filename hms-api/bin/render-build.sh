@@ -5,4 +5,4 @@ set -o errexit
 bundle install
 bundle exec rails db:migrate
 # if you have seeds, you might want to run them only once
-# bundle exec rails db:seed
+bundle exec rails db:seed
