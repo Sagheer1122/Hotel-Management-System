@@ -46,7 +46,7 @@ class Api::V1::UsersController < ApplicationController
 
     begin
       if @user.update(user_update_params)
-        Rails.logger.info "DEBUG: User updated successfully"
+        Rails.logger.info "DEBUG: User updated successfully. Avatar attached? #{@user.avatar.attached?}"
         render json: {
           id: @user.id,
           username: @user.username,
@@ -57,11 +57,12 @@ class Api::V1::UsersController < ApplicationController
         }
       else
         Rails.logger.error "DEBUG: User update failed: #{@user.errors.full_messages}"
-        render json: @user.errors, status: :unprocessable_entity
+        render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
       end
-    rescue ActionController::ParameterMissing => e
-      Rails.logger.error "DEBUG: Parameter missing: #{e.message}"
-      render json: { error: "Missing required parameters: #{e.message}" }, status: :bad_request
+    rescue => e
+      Rails.logger.error "DEBUG: Exception during update: #{e.message}"
+      Rails.logger.error e.backtrace.join("\n")
+      render json: { error: e.message }, status: :internal_server_error
     end
   end
 

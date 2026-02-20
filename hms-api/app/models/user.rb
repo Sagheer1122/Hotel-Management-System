@@ -19,7 +19,8 @@ class User < ApplicationRecord
     return nil unless avatar.attached?
 
     begin
-      Rails.application.routes.url_helpers.rails_blob_url(avatar, host: 'localhost:3000')
+      # Generate the full URL for the avatar
+      Rails.application.routes.url_helpers.rails_blob_url(avatar, only_path: false)
     rescue => e
       nil
     end

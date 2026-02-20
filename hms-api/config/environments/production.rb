@@ -18,8 +18,8 @@ Rails.application.configure do
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = "http://assets.example.com"
 
-  # Store uploaded files on the local file system (see config/storage.yml for options).
-  config.active_storage.service = :local
+  # Store uploaded files on Cloudinary for persistence.
+  config.active_storage.service = :cloudinary
 
   # Assume all access to the app is happening through a SSL-terminating reverse proxy.
   # config.assume_ssl = true
@@ -84,4 +84,9 @@ Rails.application.configure do
   #
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+  # Set host for URL generation (Active Storage, etc)
+  config.action_controller.default_url_options = { 
+    host: (ENV['RENDER_EXTERNAL_URL'] || 'hotel-management-system-uqxt.onrender.com').gsub('https://', '').gsub('http://', ''),
+    protocol: 'https' 
+  }
 end
