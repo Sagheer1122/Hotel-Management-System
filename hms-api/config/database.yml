@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: sagheer123
+  host: 127.0.0.1
+  port: 5432
+  sslmode: disable
+
+development:
+  <<: *default
+  database: hms_development
+
+test:
+  <<: *default
+  database: hms_test
+
+production:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
+  database: hms_production

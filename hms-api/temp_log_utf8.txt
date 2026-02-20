@@ -1,0 +1,100 @@
+﻿  â†³ app/models/room.rb:21:in 'Room#as_json'
+  [1m[36mActiveStorage::Attachment Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 9 AND "active_storage_attachments"."record_type" = 'Room' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:20:in 'Room#as_json'
+  [1m[36mReview Average (1.1ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."room_id" = 9 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:21:in 'Room#as_json'
+  [1m[36mActiveStorage::Attachment Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 10 AND "active_storage_attachments"."record_type" = 'Room' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:20:in 'Room#as_json'
+  [1m[36mReview Average (1.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."room_id" = 10 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:21:in 'Room#as_json'
+  [1m[36mActiveStorage::Attachment Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 11 AND "active_storage_attachments"."record_type" = 'Room' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:20:in 'Room#as_json'
+  [1m[36mReview Average (1.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."room_id" = 11 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:21:in 'Room#as_json'
+  [1m[36mActiveStorage::Attachment Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 12 AND "active_storage_attachments"."record_type" = 'Room' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:20:in 'Room#as_json'
+  [1m[36mReview Average (1.6ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."room_id" = 12 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:21:in 'Room#as_json'
+  [1m[36mActiveStorage::Attachment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 13 AND "active_storage_attachments"."record_type" = 'Room' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:20:in 'Room#as_json'
+  [1m[36mReview Average (1.1ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."room_id" = 13 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:21:in 'Room#as_json'
+  [1m[36mActiveStorage::Attachment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 14 AND "active_storage_attachments"."record_type" = 'Room' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:20:in 'Room#as_json'
+  [1m[36mReview Average (1.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."room_id" = 14 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:21:in 'Room#as_json'
+  [1m[36mActiveStorage::Attachment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 15 AND "active_storage_attachments"."record_type" = 'Room' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:20:in 'Room#as_json'
+  [1m[36mReview Average (1.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."room_id" = 15 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:21:in 'Room#as_json'
+  [1m[36mActiveStorage::Attachment Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 16 AND "active_storage_attachments"."record_type" = 'Room' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:20:in 'Room#as_json'
+  [1m[36mReview Average (2.0ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."room_id" = 16 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:21:in 'Room#as_json'
+  [1m[36mActiveStorage::Attachment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 17 AND "active_storage_attachments"."record_type" = 'Room' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:20:in 'Room#as_json'
+  [1m[36mReview Average (1.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."room_id" = 17 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:21:in 'Room#as_json'
+  [1m[36mActiveStorage::Attachment Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 18 AND "active_storage_attachments"."record_type" = 'Room' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:20:in 'Room#as_json'
+  [1m[36mReview Average (1.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."room_id" = 18 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:21:in 'Room#as_json'
+  [1m[36mActiveStorage::Attachment Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 19 AND "active_storage_attachments"."record_type" = 'Room' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:20:in 'Room#as_json'
+  [1m[36mReview Average (1.2ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."room_id" = 19 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:21:in 'Room#as_json'
+  [1m[36mActiveStorage::Attachment Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 20 AND "active_storage_attachments"."record_type" = 'Room' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:20:in 'Room#as_json'
+  [1m[36mReview Average (1.1ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."room_id" = 20 /*action='index',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:21:in 'Room#as_json'
+Completed 200 OK in 335ms (Views: 284.5ms | ActiveRecord: 49.9ms (41 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/rooms/3" for ::1 at 2026-02-21 00:32:27 +0500
+Processing by Api::V1::RoomsController#show as JSON
+  Parameters: {"id" => "3"}
+  [1m[36mRoom Load (1.1ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 3 LIMIT 1 /*action='show',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/controllers/api/v1/rooms_controller.rb:42:in 'Api::V1::RoomsController#set_room'
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."room_id" = 3 /*action='show',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:19:in 'Room#as_json'
+  [1m[36mActiveStorage::Attachment Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'Room' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='show',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:20:in 'Room#as_json'
+  [1m[36mReview Average (1.1ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."room_id" = 3 /*action='show',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:21:in 'Room#as_json'
+Completed 200 OK in 57ms (Views: 46.4ms | ActiveRecord: 4.2ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/rooms/3" for ::1 at 2026-02-21 00:32:27 +0500
+Started GET "/api/v1/rooms/3/reviews" for ::1 at 2026-02-21 00:32:27 +0500
+Processing by Api::V1::RoomsController#show as JSON
+  Parameters: {"id" => "3"}
+  [1m[36mRoom Load (1.8ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 3 LIMIT 1 /*action='show',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/controllers/api/v1/rooms_controller.rb:42:in 'Api::V1::RoomsController#set_room'
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."room_id" = 3 /*action='show',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:19:in 'Room#as_json'
+  [1m[36mActiveStorage::Attachment Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'Room' AND "active_storage_attachments"."name" = 'images' LIMIT 1 /*action='show',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:20:in 'Room#as_json'
+  [1m[36mReview Average (1.3ms)[0m  [1m[34mSELECT AVG("reviews"."rating") FROM "reviews" WHERE "reviews"."room_id" = 3 /*action='show',application='HmsApi',controller='rooms'*/[0m
+  â†³ app/models/room.rb:21:in 'Room#as_json'
+Completed 200 OK in 32ms (Views: 18.2ms | ActiveRecord: 5.2ms (4 queries, 0 cached) | GC: 0.2ms)
+
+
+Processing by Api::V1::ReviewsController#index as JSON
+  Parameters: {"room_id" => "3"}
+  [1m[36mRoom Load (0.9ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 3 LIMIT 1 /*action='index',application='HmsApi',controller='reviews'*/[0m
+  â†³ app/controllers/api/v1/reviews_controller.rb:7:in 'Api::V1::ReviewsController#index'
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."room_id" = 3 /*action='index',application='HmsApi',controller='reviews'*/[0m
+  â†³ app/controllers/api/v1/reviews_controller.rb:12:in 'Api::V1::ReviewsController#index'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 1.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/rooms/3/reviews" for ::1 at 2026-02-21 00:32:28 +0500
+Processing by Api::V1::ReviewsController#index as JSON
+  Parameters: {"room_id" => "3"}
+  [1m[36mRoom Load (1.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = 3 LIMIT 1 /*action='index',application='HmsApi',controller='reviews'*/[0m
+  â†³ app/controllers/api/v1/reviews_controller.rb:7:in 'Api::V1::ReviewsController#index'
+  [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."room_id" = 3 /*action='index',application='HmsApi',controller='reviews'*/[0m
+  â†³ app/controllers/api/v1/reviews_controller.rb:12:in 'Api::V1::ReviewsController#index'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 2.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+

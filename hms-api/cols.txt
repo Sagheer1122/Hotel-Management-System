@@ -1,0 +1,1 @@
+["id", "email", "password_digest", "role", "status", "username", "created_at", "updated_at", "reset_password_token", "reset_password_sent_at"]

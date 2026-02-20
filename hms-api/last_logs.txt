@@ -1,0 +1,200 @@
+﻿  â†³ app/controllers/api/v1/reviews_controller.rb:12:in 'Api::V1::ReviewsController#index'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 2.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--27b0852eedb4b068b9a06b2880428034f579d064/WhatsApp%20Image%202025-12-19%20at%202.29.03%20PM.jpeg" for ::1 at 2026-02-21 00:38:49 +0500
+Started GET "/api/v1/bookings?user_id=1" for ::1 at 2026-02-21 00:38:49 +0500
+Processing by Api::V1::BookingsController#index as JSON
+  Parameters: {"user_id" => "1"}
+  [1m[36mBooking Update All (287.7ms)[0m  [1m[33mUPDATE "bookings" SET "status" = 3 WHERE "bookings"."status" = 1 AND (end_date < '2026-02-20') /*action='index',application='HmsApi',controller='bookings'*/[0m
+  â†³ app/models/booking.rb:23:in 'Booking.auto_complete_expired_bookings'
+  [1m[36mBooking Load (1.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = 1 /*action='index',application='HmsApi',controller='bookings'*/[0m
+  â†³ app/controllers/api/v1/bookings_controller.rb:17:in 'Api::V1::BookingsController#index'
+Completed 200 OK in 311ms (Views: 0.3ms | ActiveRecord: 330.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/v1/bookings?user_id=1" for ::1 at 2026-02-21 00:38:50 +0500
+Processing by Api::V1::BookingsController#index as JSON
+  Parameters: {"user_id" => "1"}
+  [1m[36mBooking Update All (1.3ms)[0m  [1m[33mUPDATE "bookings" SET "status" = 3 WHERE "bookings"."status" = 1 AND (end_date < '2026-02-20') /*action='index',application='HmsApi',controller='bookings'*/[0m
+  â†³ app/models/booking.rb:23:in 'Booking.auto_complete_expired_bookings'
+  [1m[36mBooking Load (1.6ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = 1 /*action='index',application='HmsApi',controller='bookings'*/[0m
+  â†³ app/controllers/api/v1/bookings_controller.rb:17:in 'Api::V1::BookingsController#index'
+Completed 200 OK in 20ms (Views: 0.2ms | ActiveRecord: 2.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id" => "eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--27b0852eedb4b068b9a06b2880428034f579d064", "filename" => "WhatsApp Image 2025-12-19 at 2.29.03 PM"}
+  [1m[36mActiveStorage::Blob Load (7.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='show',application='HmsApi',controller='redirect'*/[0m
+Completed 404 Not Found in 58ms (ActiveRecord: 42.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find ActiveStorage::Blob with 'id'=1):
+  
+activerecord (8.1.2) lib/active_record/core.rb:279:in 'ActiveRecord::Core::ClassMethods#find'
+activerecord (8.1.2) lib/active_record/signed_id.rb:92:in 'ActiveRecord::SignedId::ClassMethods#find_signed!'
+activestorage (8.1.2) app/models/active_storage/blob.rb:77:in 'ActiveStorage::Blob.find_signed!'
+activestorage (8.1.2) app/controllers/concerns/active_storage/set_blob.rb:12:in 'ActiveStorage::SetBlob#set_blob'
+activesupport (8.1.2) lib/active_support/callbacks.rb:362:in 'block in ActiveSupport::Callbacks::CallTemplate::MethodCall#make_lambda'
+activesupport (8.1.2) lib/active_support/callbacks.rb:179:in 'block in ActiveSupport::Callbacks::Filters::Before#call'
+actionpack (8.1.2) lib/abstract_controller/callbacks.rb:36:in 'block (2 levels) in <module:Callbacks>'
+activesupport (8.1.2) lib/active_support/callbacks.rb:180:in 'ActiveSupport::Callbacks::Filters::Before#call'
+activesupport (8.1.2) lib/active_support/callbacks.rb:560:in 'block in ActiveSupport::Callbacks::CallbackSequence#invoke_before'
+activesupport (8.1.2) lib/active_support/callbacks.rb:560:in 'Array#each'
+activesupport (8.1.2) lib/active_support/callbacks.rb:560:in 'ActiveSupport::Callbacks::CallbackSequence#invoke_before'
+activesupport (8.1.2) lib/active_support/callbacks.rb:119:in 'block in ActiveSupport::Callbacks#run_callbacks'
+actiontext (8.1.2) lib/action_text/rendering.rb:24:in 'ActionText::Rendering::ClassMethods#with_renderer'
+actiontext (8.1.2) lib/action_text/engine.rb:72:in 'block (4 levels) in <class:Engine>'
+activesupport (8.1.2) lib/active_support/callbacks.rb:130:in 'BasicObject#instance_exec'
+activesupport (8.1.2) lib/active_support/callbacks.rb:130:in 'block in ActiveSupport::Callbacks#run_callbacks'
+activesupport (8.1.2) lib/active_support/callbacks.rb:141:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.1.2) lib/abstract_controller/callbacks.rb:266:in 'AbstractController::Callbacks#process_action'
+actionpack (8.1.2) lib/action_controller/metal/rescue.rb:36:in 'ActionController::Rescue#process_action'
+actionpack (8.1.2) lib/action_controller/metal/instrumentation.rb:76:in 'block in ActionController::Instrumentation#process_action'
+activesupport (8.1.2) lib/active_support/notifications.rb:210:in 'block in ActiveSupport::Notifications.instrument'
+activesupport (8.1.2) lib/active_support/notifications/instrumenter.rb:58:in 'ActiveSupport::Notifications::Instrumenter#instrument'
+activesupport (8.1.2) lib/active_support/notifications.rb:210:in 'ActiveSupport::Notifications.instrument'
+actionpack (8.1.2) lib/action_controller/metal/instrumentation.rb:75:in 'ActionController::Instrumentation#process_action'
+actionpack (8.1.2) lib/action_controller/metal/params_wrapper.rb:259:in 'ActionController::ParamsWrapper#process_action'
+activerecord (8.1.2) lib/active_record/railties/controller_runtime.rb:39:in 'ActiveRecord::Railties::ControllerRuntime#process_action'
+actionpack (8.1.2) lib/abstract_controller/base.rb:154:in 'AbstractController::Base#process'
+actionview (8.1.2) lib/action_view/rendering.rb:40:in 'ActionView::Rendering#process'
+actionpack (8.1.2) lib/action_controller/metal.rb:252:in 'ActionController::Metal#dispatch'
+actionpack (8.1.2) lib/action_controller/metal.rb:335:in 'ActionController::Metal.dispatch'
+actionpack (8.1.2) lib/action_dispatch/routing/route_set.rb:65:in 'ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+actionpack (8.1.2) lib/action_dispatch/routing/route_set.rb:50:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.1.2) lib/action_dispatch/journey/router.rb:35:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.1.2) lib/action_dispatch/journey/router.rb:86:in 'block in ActionDispatch::Journey::Router#recognize'
+actionpack (8.1.2) lib/action_dispatch/journey/router.rb:66:in 'Array#each'
+actionpack (8.1.2) lib/action_dispatch/journey/router.rb:66:in 'ActionDispatch::Journey::Router#recognize'
+actionpack (8.1.2) lib/action_dispatch/journey/router.rb:31:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.1.2) lib/action_dispatch/routing/route_set.rb:906:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.1.2) lib/rails/engine/lazy_route_set.rb:60:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.2.4) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.2.4) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.2.4) lib/rack/head.rb:15:in 'Rack::Head#call'
+activerecord (8.1.2) lib/active_record/migration.rb:671:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.1.2) lib/active_support/callbacks.rb:101:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.1.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/executor.rb:20:in 'ActionDispatch::Executor#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.1.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.1.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/remote_ip.rb:98:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.2.4) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (8.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.1.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/executor.rb:20:in 'ActionDispatch::Executor#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.2.4) lib/rack/sendfile.rb:131:in 'Rack::Sendfile#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in 'Rack::Cors#call'
+railties (8.1.2) lib/rails/engine.rb:534:in 'Rails::Engine#call'
+puma (7.2.0) lib/puma/configuration.rb:296:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (7.2.0) lib/puma/request.rb:103:in 'block in Puma::Request#handle_request'
+puma (7.2.0) lib/puma/thread_pool.rb:355:in 'Puma::ThreadPool#with_force_shutdown'
+puma (7.2.0) lib/puma/request.rb:102:in 'Puma::Request#handle_request'
+puma (7.2.0) lib/puma/server.rb:503:in 'Puma::Server#process_client'
+puma (7.2.0) lib/puma/server.rb:262:in 'block in Puma::Server#run'
+puma (7.2.0) lib/puma/thread_pool.rb:182:in 'block in Puma::ThreadPool#spawn_thread'
+Started PATCH "/api/v1/users/1" for ::1 at 2026-02-21 00:38:57 +0500
+Processing by Api::V1::UsersController#update as JSON
+  Parameters: {"user" => {"avatar" => #<ActionDispatch::Http::UploadedFile:0x0000020384fb2410 @tempfile=#<Tempfile:C:/Users/TECHME~1/AppData/Local/Temp/RackMultipart20260221-18416-f3859k.jpeg>, @content_type="image/jpeg", @original_filename="WhatsApp Image 2025-12-19 at 2.29.03 PM.jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"WhatsApp Image 2025-12-19 at 2.29.03 PM.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "id" => "1"}
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='update',application='HmsApi',controller='users'*/[0m
+  â†³ app/controllers/api/v1/users_controller.rb:76:in 'Api::V1::UsersController#set_user'
+Completed 404 Not Found in 10ms (ActiveRecord: 5.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'="1"):
+  
+app/controllers/api/v1/users_controller.rb:76:in 'Api::V1::UsersController#set_user'
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--27b0852eedb4b068b9a06b2880428034f579d064/WhatsApp%20Image%202025-12-19%20at%202.29.03%20PM.jpeg" for ::1 at 2026-02-21 00:38:57 +0500
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id" => "eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--27b0852eedb4b068b9a06b2880428034f579d064", "filename" => "WhatsApp Image 2025-12-19 at 2.29.03 PM"}
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='show',application='HmsApi',controller='redirect'*/[0m
+Completed 404 Not Found in 9ms (ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find ActiveStorage::Blob with 'id'=1):
+  
+activerecord (8.1.2) lib/active_record/core.rb:279:in 'ActiveRecord::Core::ClassMethods#find'
+activerecord (8.1.2) lib/active_record/signed_id.rb:92:in 'ActiveRecord::SignedId::ClassMethods#find_signed!'
+activestorage (8.1.2) app/models/active_storage/blob.rb:77:in 'ActiveStorage::Blob.find_signed!'
+activestorage (8.1.2) app/controllers/concerns/active_storage/set_blob.rb:12:in 'ActiveStorage::SetBlob#set_blob'
+activesupport (8.1.2) lib/active_support/callbacks.rb:362:in 'block in ActiveSupport::Callbacks::CallTemplate::MethodCall#make_lambda'
+activesupport (8.1.2) lib/active_support/callbacks.rb:179:in 'block in ActiveSupport::Callbacks::Filters::Before#call'
+actionpack (8.1.2) lib/abstract_controller/callbacks.rb:36:in 'block (2 levels) in <module:Callbacks>'
+activesupport (8.1.2) lib/active_support/callbacks.rb:180:in 'ActiveSupport::Callbacks::Filters::Before#call'
+activesupport (8.1.2) lib/active_support/callbacks.rb:560:in 'block in ActiveSupport::Callbacks::CallbackSequence#invoke_before'
+activesupport (8.1.2) lib/active_support/callbacks.rb:560:in 'Array#each'
+activesupport (8.1.2) lib/active_support/callbacks.rb:560:in 'ActiveSupport::Callbacks::CallbackSequence#invoke_before'
+activesupport (8.1.2) lib/active_support/callbacks.rb:119:in 'block in ActiveSupport::Callbacks#run_callbacks'
+actiontext (8.1.2) lib/action_text/rendering.rb:24:in 'ActionText::Rendering::ClassMethods#with_renderer'
+actiontext (8.1.2) lib/action_text/engine.rb:72:in 'block (4 levels) in <class:Engine>'
+activesupport (8.1.2) lib/active_support/callbacks.rb:130:in 'BasicObject#instance_exec'
+activesupport (8.1.2) lib/active_support/callbacks.rb:130:in 'block in ActiveSupport::Callbacks#run_callbacks'
+activesupport (8.1.2) lib/active_support/callbacks.rb:141:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.1.2) lib/abstract_controller/callbacks.rb:266:in 'AbstractController::Callbacks#process_action'
+actionpack (8.1.2) lib/action_controller/metal/rescue.rb:36:in 'ActionController::Rescue#process_action'
+actionpack (8.1.2) lib/action_controller/metal/instrumentation.rb:76:in 'block in ActionController::Instrumentation#process_action'
+activesupport (8.1.2) lib/active_support/notifications.rb:210:in 'block in ActiveSupport::Notifications.instrument'
+activesupport (8.1.2) lib/active_support/notifications/instrumenter.rb:58:in 'ActiveSupport::Notifications::Instrumenter#instrument'
+activesupport (8.1.2) lib/active_support/notifications.rb:210:in 'ActiveSupport::Notifications.instrument'
+actionpack (8.1.2) lib/action_controller/metal/instrumentation.rb:75:in 'ActionController::Instrumentation#process_action'
+actionpack (8.1.2) lib/action_controller/metal/params_wrapper.rb:259:in 'ActionController::ParamsWrapper#process_action'
+activerecord (8.1.2) lib/active_record/railties/controller_runtime.rb:39:in 'ActiveRecord::Railties::ControllerRuntime#process_action'
+actionpack (8.1.2) lib/abstract_controller/base.rb:154:in 'AbstractController::Base#process'
+actionview (8.1.2) lib/action_view/rendering.rb:40:in 'ActionView::Rendering#process'
+actionpack (8.1.2) lib/action_controller/metal.rb:252:in 'ActionController::Metal#dispatch'
+actionpack (8.1.2) lib/action_controller/metal.rb:335:in 'ActionController::Metal.dispatch'
+actionpack (8.1.2) lib/action_dispatch/routing/route_set.rb:65:in 'ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+actionpack (8.1.2) lib/action_dispatch/routing/route_set.rb:50:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.1.2) lib/action_dispatch/journey/router.rb:35:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.1.2) lib/action_dispatch/journey/router.rb:86:in 'block in ActionDispatch::Journey::Router#recognize'
+actionpack (8.1.2) lib/action_dispatch/journey/router.rb:66:in 'Array#each'
+actionpack (8.1.2) lib/action_dispatch/journey/router.rb:66:in 'ActionDispatch::Journey::Router#recognize'
+actionpack (8.1.2) lib/action_dispatch/journey/router.rb:31:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.1.2) lib/action_dispatch/routing/route_set.rb:906:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.1.2) lib/rails/engine/lazy_route_set.rb:60:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.2.4) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.2.4) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.2.4) lib/rack/head.rb:15:in 'Rack::Head#call'
+activerecord (8.1.2) lib/active_record/migration.rb:671:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.1.2) lib/active_support/callbacks.rb:101:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.1.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/executor.rb:20:in 'ActionDispatch::Executor#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.1.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.1.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/remote_ip.rb:98:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.2.4) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (8.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.1.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/executor.rb:20:in 'ActionDispatch::Executor#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.2.4) lib/rack/sendfile.rb:131:in 'Rack::Sendfile#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in 'Rack::Cors#call'
+railties (8.1.2) lib/rails/engine.rb:534:in 'Rails::Engine#call'
+puma (7.2.0) lib/puma/configuration.rb:296:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (7.2.0) lib/puma/request.rb:103:in 'block in Puma::Request#handle_request'
+puma (7.2.0) lib/puma/thread_pool.rb:355:in 'Puma::ThreadPool#with_force_shutdown'
+puma (7.2.0) lib/puma/request.rb:102:in 'Puma::Request#handle_request'
+puma (7.2.0) lib/puma/server.rb:503:in 'Puma::Server#process_client'
+puma (7.2.0) lib/puma/server.rb:262:in 'block in Puma::Server#run'
+puma (7.2.0) lib/puma/thread_pool.rb:182:in 'block in Puma::ThreadPool#spawn_thread'
