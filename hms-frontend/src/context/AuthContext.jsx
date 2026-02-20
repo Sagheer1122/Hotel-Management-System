@@ -35,7 +35,12 @@ export const AuthProvider = ({ children }) => {
         const verifySession = async () => {
             if (user && token) {
                 try {
+                    // Add timeout so loading doesn't get stuck if backend is slow
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 8000);
+
                     const response = await usersAPI.getById(user.id);
+                    clearTimeout(timeoutId);
                     // Update user data with fresh data from server
                     setUser(response.data);
                 } catch (error) {
@@ -43,6 +48,7 @@ export const AuthProvider = ({ children }) => {
                     if (error.response?.status === 404 || error.response?.status === 401) {
                         logout();
                     }
+                    // For other errors (network/timeout), keep user logged in
                 }
             }
             setLoading(false);
