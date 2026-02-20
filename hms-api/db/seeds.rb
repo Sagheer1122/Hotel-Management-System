@@ -1,3 +1,6 @@
+# Use inline adapter during seeding to avoid SolidQueue dependency
+ActiveJob::Base.queue_adapter = :inline
+
 # Clear existing data
 puts "Cleaning database..."
 Review.destroy_all
