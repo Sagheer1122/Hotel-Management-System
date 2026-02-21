@@ -11,7 +11,7 @@ chmod +x bin/*
 echo "Installing dependencies..."
 bundle install
 
-echo "Running migrations..."
-RAILS_ENV=production bundle exec rails db:migrate
+echo "Running migrations and seeding..."
+RAILS_ENV=production bundle exec rails db:migrate db:seed
 
 echo "Build complete!"

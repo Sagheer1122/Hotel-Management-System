@@ -77,8 +77,10 @@ Rails.application.configure do
   config.hosts.clear
 
   # Set host for URL generation (Active Storage, etc)
-  config.action_controller.default_url_options = { 
-    host: (ENV['RENDER_EXTERNAL_URL'] || 'hotel-management-system-uqxt.onrender.com').gsub('https://', '').gsub('http://', ''),
-    protocol: 'https' 
-  }
+  render_host = (ENV['RENDER_EXTERNAL_URL'] || 'hotel-management-system-uqxt.onrender.com').gsub('https://', '').gsub('http://', '')
+  config.action_controller.default_url_options = { host: render_host, protocol: 'https' }
+  config.action_mailer.default_url_options = { host: render_host, protocol: 'https' }
+  
+  # Ensure Active Storage uses the correct host
+  Rails.application.routes.default_url_options = config.action_controller.default_url_options
 end
