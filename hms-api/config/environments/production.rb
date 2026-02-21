@@ -77,14 +77,9 @@ Rails.application.configure do
   # Only use :id for inspections in production.
   config.active_record.attributes_for_inspect = [ :id ]
 
-  # Enable DNS rebinding protection and other `Host` header attacks.
-  # config.hosts = [
-  #   "example.com",     # Allow requests from example.com
-  #   /.*\.example\.com/ # Allow requests from subdomains like `www.example.com`
-  # ]
-  #
-  # Skip DNS rebinding protection for the default health check endpoint.
-  # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+  # Disable host authorization to fix 502 Bad Gateway errors on Render
+  config.hosts.clear
+
   # Set host for URL generation (Active Storage, etc)
   config.action_controller.default_url_options = { 
     host: (ENV['RENDER_EXTERNAL_URL'] || 'hotel-management-system-uqxt.onrender.com').gsub('https://', '').gsub('http://', ''),
