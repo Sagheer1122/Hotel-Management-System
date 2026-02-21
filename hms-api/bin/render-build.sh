@@ -9,6 +9,5 @@ chmod +x bin/*
 
 bundle install
 
-# Force production migration and seeding
+# Run migrations only (no seeds - will seed separately)
 RAILS_ENV=production bundle exec rails db:migrate
-RAILS_ENV=production bundle exec rails db:seed

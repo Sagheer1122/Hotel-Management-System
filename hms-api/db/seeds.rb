@@ -1,29 +1,23 @@
-# Use inline adapter during seeding to avoid SolidQueue dependency
-ActiveJob::Base.queue_adapter = :inline
+# Skip if already seeded
+if User.count > 0
+  puts "Already seeded, skipping..."
+else
+  puts "Creating users..."
+  admin = User.create!(
+    username: 'admin',
+    email: 'admin@example.com',
+    password: 'admin12',
+    password_confirmation: 'admin12',
+    role: 'admin'
+  )
 
-# Clear existing data
-puts "Cleaning database..."
-Review.destroy_all
-Booking.destroy_all
-Room.destroy_all
-User.destroy_all
-
-puts "Creating users..."
-admin = User.create!(
-  username: 'admin',
-  email: 'admin@example.com',
-  password: 'admin12',
-  password_confirmation: 'admin12',
-  role: 'admin'
-)
-
-user = User.create!(
-  username: 'john_doe',
-  email: 'john@example.com',
-  password: 'password',
-  password_confirmation: 'password',
-  role: 'user'
-)
+  user = User.create!(
+    username: 'john_doe',
+    email: 'john@example.com',
+    password: 'password',
+    password_confirmation: 'password',
+    role: 'user'
+  )
 
 puts "Creating rooms..."
 rooms_data = [
