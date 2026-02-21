@@ -60,7 +60,7 @@ const Navbar = () => {
                             <div className="flex items-center gap-4 pl-4 border-l border-gray-100">
                                 <Link to="/profile" className="w-9 h-9 rounded-full overflow-hidden border border-gray-200 hover:border-indigo-500 transition-all">
                                     <img
-                                        src={user?.avatar_url ? (user.avatar_url.startsWith('http') ? user.avatar_url : `http://localhost:3000${user.avatar_url}`) : `https://ui-avatars.com/api/?name=${user?.username}&background=4f46e5&color=fff&bold=true`}
+                                        src={user?.avatar_url ? (user.avatar_url.startsWith('http') ? user.avatar_url : `https://hotel-management-system-uqxt.onrender.com${user.avatar_url}`) : `https://ui-avatars.com/api/?name=${user?.username}&background=4f46e5&color=fff&bold=true`}
                                         alt="Profile"
                                         className="w-full h-full object-cover"
                                     />

@@ -15,7 +15,7 @@ const AdminInquiries = () => {
     const [showProfileMenu, setShowProfileMenu] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const API_BASE_URL = 'http://localhost:3000';
+    const API_BASE_URL = 'https://hotel-management-system-uqxt.onrender.com';
 
     const getAvatarUrl = (url) => {
         if (!url) return null;

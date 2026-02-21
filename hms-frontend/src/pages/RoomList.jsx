@@ -16,7 +16,7 @@ const RoomList = () => {
         const fetchRooms = async () => {
             try {
                 setLoading(true);
-                const response = await fetch('http://localhost:3000/api/v1/rooms');
+                const response = await fetch('https://hotel-management-system-uqxt.onrender.com/api/v1/rooms');
                 if (!response.ok) throw new Error('Failed to fetch');
                 const data = await response.json();
                 const roomsData = Array.isArray(data) ? data : [];
