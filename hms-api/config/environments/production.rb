@@ -18,12 +18,8 @@ Rails.application.configure do
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = "http://assets.example.com"
 
-  # Store uploaded files on Cloudinary if URL is present, otherwise fallback to local for stability
-  if ENV['CLOUDINARY_URL'].present?
-    config.active_storage.service = :cloudinary
-  else
-    config.active_storage.service = :local
-  end
+  # Store uploaded files on local system
+  config.active_storage.service = :local
 
   # Assume all access to the app is happening through a SSL-terminating reverse proxy.
   # config.assume_ssl = true
