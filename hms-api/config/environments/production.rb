@@ -43,10 +43,8 @@ Rails.application.configure do
   # Don't log any deprecations.
   config.active_support.report_deprecations = false
 
-  # Use memory store instead of solid_cache for now to avoid table issues
+  # Use simple memory store and async jobs
   config.cache_store = :memory_store
-
-  # Use async instead of solid_queue to avoid table issues
   config.active_job.queue_adapter = :async
 
   # Ignore bad email addresses and do not raise email delivery errors.
