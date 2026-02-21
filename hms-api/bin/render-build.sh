@@ -2,7 +2,14 @@
 # exit on error
 set -o errexit
 
+# Fix line endings for all bin files (Windows to Linux conversion)
+find bin -type f -exec sed -i 's/\r$//' {} +
+chmod +x bin/*
+
 bundle install
+
+# Run migrations
 bundle exec rails db:migrate
-# if you have seeds, you might want to run them only once
+
+# Seed data (Rooms and Admin)
 bundle exec rails db:seed
