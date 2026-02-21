@@ -20,6 +20,9 @@ Rails.application.routes.draw do
     end
   end
 
+  # Root route to verify backend is live
+  root to: proc { [200, { 'Content-Type' => 'application/json' }, [{ status: 'Monarch HMS API is Live! 🚀', time: Time.now }.to_json]] }
+
   # Temporary debug endpoint - remove after testing
   get '/debug/db', to: proc { |env|
     users = User.all.map { |u| { id: u.id, email: u.email, role: u.role } }
