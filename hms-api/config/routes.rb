@@ -21,7 +21,10 @@ Rails.application.routes.draw do
   end
 
   # Root route to verify backend is live
-  root to: proc { [200, { 'Content-Type' => 'application/json' }, [{ status: 'Monarch HMS API is Live! 🚀', time: Time.now }.to_json]] }
+  root to: proc { |env|
+    Rails.logger.info "DEBUG: Root route hit! Sending live status."
+    [200, { 'Content-Type' => 'application/json' }, [{ status: 'Monarch HMS API is Live! 🚀', time: Time.now }.to_json]]
+  }
 
   # Temporary debug endpoint - remove after testing
   get '/debug/db', to: proc { |env|
