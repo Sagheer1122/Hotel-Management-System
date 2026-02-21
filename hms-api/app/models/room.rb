@@ -16,9 +16,19 @@ class Room < ApplicationRecord
   include Rails.application.routes.url_helpers
 
   def as_json(options = {})
+    # Use global default_url_options instead of hardcoded host
+    image_url = nil
+    if images.attached?
+      begin
+        image_url = rails_blob_url(images.first, only_path: false)
+      rescue
+        image_url = nil
+      end
+    end
+
     super(options).merge(
-      image: images.attached? ? rails_blob_url(images.first, host: 'localhost:3000') : nil,
-      rating: reviews.average(:rating)&.round(1).to_f || 0
+      image: image_url,
+      rating: reviews.average(:rating).to_f.round(1)
     )
   end
 end
