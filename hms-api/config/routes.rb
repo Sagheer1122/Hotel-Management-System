@@ -19,4 +19,10 @@ Rails.application.routes.draw do
       get 'my_reviews', to: 'reviews#user_index'
     end
   end
+
+  # Temporary debug endpoint - remove after testing
+  get '/debug/db', to: proc { |env|
+    users = User.all.map { |u| { id: u.id, email: u.email, role: u.role } }
+    [200, { 'Content-Type' => 'application/json' }, [{ users_count: User.count, users: users }.to_json]]
+  }
 end
