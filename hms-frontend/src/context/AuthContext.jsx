@@ -41,7 +41,7 @@ export const AuthProvider = ({ children }) => {
             if (user && token) {
                 try {
                     const response = await usersAPI.getById(user.id);
-                    setUser(response.data);
+                    setUser(prev => ({ ...prev, ...response.data }));
                 } catch (error) {
                     console.error('Session verification failed:', error);
                     if (error.response?.status === 404 || error.response?.status === 401) {

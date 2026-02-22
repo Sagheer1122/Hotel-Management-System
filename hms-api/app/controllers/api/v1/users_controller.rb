@@ -8,7 +8,14 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def show
-    render json: @user, methods: :avatar_url
+    render json: {
+      id: @user.id,
+      username: @user.username,
+      email: @user.email,
+      role: @user.role,
+      status: @user.status,
+      avatar_url: @user.avatar_url
+    }
   end
 
   def create
