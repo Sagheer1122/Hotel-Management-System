@@ -92,7 +92,7 @@ const AdminPayments = () => {
 
         return (
             <span className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider ${styles[statusStr] || styles.pending_payment}`}>
-                {statusStr.replace('_', ' ')}
+                {statusStr === 'pending_payment' ? 'pending' : statusStr.replace('_', ' ')}
             </span>
         );
     };

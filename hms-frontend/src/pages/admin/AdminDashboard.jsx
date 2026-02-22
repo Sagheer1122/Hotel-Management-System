@@ -679,7 +679,7 @@ const AdminDashboard = () => {
                                                             booking.payment_status === 'failed' ? 'bg-red-100 text-red-600' :
                                                                 'bg-yellow-100 text-yellow-600'
                                                             }`}>
-                                                            {booking.payment_status?.replace('_', ' ') || 'Pending'}
+                                                            {(booking.payment_status === 'pending_payment' || !booking.payment_status) ? 'Pending' : booking.payment_status.replace('_', ' ')}
                                                         </span>
                                                     </td>
                                                     <td className="py-5 px-6 md:px-8 text-right">

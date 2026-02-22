@@ -280,7 +280,7 @@ const Bookings = () => {
                                         selectedBooking.payment_status === 'failed' ? 'bg-red-100 text-red-700' :
                                             'bg-yellow-100 text-yellow-700'
                                         }`}>
-                                        Payment: {selectedBooking.payment_status?.replace('_', ' ') || 'Pending'}
+                                        Payment: {(selectedBooking.payment_status === 'pending_payment' || !selectedBooking.payment_status) ? 'Pending' : selectedBooking.payment_status.replace('_', ' ')}
                                     </div>
                                     <span className="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase tracking-wider">
                                         Method: {selectedBooking.payment_method?.replace('_', ' ') || 'Pay at Hotel'}
