@@ -33,7 +33,7 @@ class Booking < ApplicationRecord
   end
 
   def self.auto_complete_expired_bookings
-    where(status: :approved).where('end_date < ?', Date.current).update_all(status: :completed)
+    where(status: :approved).where('end_date < ?', Time.current).update_all(status: :completed)
   end
 
   private
@@ -66,8 +66,9 @@ class Booking < ApplicationRecord
 
   def calculate_total_price
     if start_date.present? && end_date.present? && room.present?
-      days = (end_date - start_date).to_i
-      self.total_price = days * room.price
+      # Calculate duration in days, rounding up if there's any fractional part
+      days = ((end_date.to_f - start_date.to_f) / 1.day).ceil
+      self.total_price = [days, 1].max * room.price
     end
   end
 end

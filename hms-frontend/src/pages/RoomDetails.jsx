@@ -24,33 +24,53 @@ const RoomDetails = () => {
         paymentMethod: 'pay_at_hotel'
     });
 
+    useEffect(() => {
+        const start = new Date();
+        const end = new Date();
+        end.setDate(end.getDate() + 1);
+
+        setBookingData(prev => ({
+            ...prev,
+            checkIn: formatDateTime(new Date(2026, 1, 17, 14, 0)), // Match minCheckIn
+            checkOut: formatDateTime(new Date(2026, 1, 18, 11, 0))
+        }));
+    }, []);
+
     // Calculate valid date ranges for 2026
     const today = new Date();
     const currentYear = 2026;
 
-    // Format: YYYY-MM-DD
-    const formatDate = (date) => {
+    // Format: YYYY-MM-DDTHH:mm
+    const formatDateTime = (date) => {
         const d = new Date(date);
-        let month = '' + (d.getMonth() + 1);
-        let day = '' + d.getDate();
         const year = d.getFullYear();
+        const month = String(d.getMonth() + 1).padStart(2, '0');
+        const day = String(d.getDate()).padStart(2, '0');
+        const hours = String(d.getHours()).padStart(2, '0');
+        const minutes = String(d.getMinutes()).padStart(2, '0');
 
-        if (month.length < 2) month = '0' + month;
-        if (day.length < 2) day = '0' + day;
+        return `${year}-${month}-${day}T${hours}:${minutes}`;
+    };
 
-        return [year, month, day].join('-');
+    // Default check-in time: 14:00 (2 PM)
+    // Default check-out time: 11:00 (11 AM)
+    const getDefaultDateTime = (date, hours) => {
+        const d = new Date(date);
+        d.setHours(hours, 0, 0, 0);
+        return formatDateTime(d);
     };
 
     // Min date is today if in 2026, otherwise start of 2026
-    const minCheckIn = formatDate(new Date(2026, 1, 17)); // February 17, 2026
-    const maxDate = '2026-12-31';
+    const minCheckIn = formatDateTime(new Date(2026, 1, 17, 14, 0)); // February 17, 2026, 2:00 PM
+    const maxDate = '2026-12-31T23:59';
 
     // Min check-out is check-in + 1 day
     const getMinCheckOut = () => {
         if (!bookingData.checkIn) return minCheckIn;
         const checkInDate = new Date(bookingData.checkIn);
         checkInDate.setDate(checkInDate.getDate() + 1);
-        return formatDate(checkInDate);
+        checkInDate.setHours(11, 0, 0, 0);
+        return formatDateTime(checkInDate);
     };
 
     useEffect(() => {
@@ -95,8 +115,8 @@ const RoomDetails = () => {
             await bookingsAPI.create({
                 user_id: user.id,
                 room_id: room.id,
-                start_date: bookingData.checkIn,
-                end_date: bookingData.checkOut,
+                start_date: new Date(bookingData.checkIn).toISOString(),
+                end_date: new Date(bookingData.checkOut).toISOString(),
                 status: 'pending',
                 payment_method: bookingData.paymentMethod,
                 payment_status: 'pending_payment'
@@ -395,7 +415,7 @@ const RoomDetails = () => {
                                     <div className="space-y-2">
                                         <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest">Check-in</label>
                                         <input
-                                            type="date"
+                                            type="datetime-local"
                                             value={bookingData.checkIn}
                                             min={minCheckIn}
                                             max={maxDate}
@@ -406,7 +426,7 @@ const RoomDetails = () => {
                                     <div className="space-y-2">
                                         <label className="block text-[10px] font-black text-slate-400 uppercase tracking-widest">Check-out</label>
                                         <input
-                                            type="date"
+                                            type="datetime-local"
                                             value={bookingData.checkOut}
                                             min={getMinCheckOut()}
                                             max={maxDate}
@@ -495,7 +515,7 @@ const RoomDetails = () => {
                                     )}
                                     <div className="flex justify-between items-center pt-4 border-t border-slate-100">
                                         <span className="text-sm font-bold text-slate-500">Total Amount</span>
-                                        <span className="text-2xl md:text-3xl font-black text-indigo-600 tracking-tight">Rs.{bookingData.checkIn && bookingData.checkOut
+                                        <span className="text-2xl md:text-3xl font-black text-indigo-600 tracking-tight">Rs.{bookingData.checkIn && bookingData.checkOut && !isNaN(new Date(bookingData.checkIn)) && !isNaN(new Date(bookingData.checkOut))
                                             ? (room.price * Math.max(1, Math.ceil((new Date(bookingData.checkOut) - new Date(bookingData.checkIn)) / (1000 * 60 * 60 * 24)))).toLocaleString()
                                             : room.price.toLocaleString()}
                                         </span>
