@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
@@ -32,6 +33,7 @@ function App() {
 
     return (
         <AuthProvider>
+            <ScrollToTop />
             <div className="min-h-screen bg-gray-50 text-gray-900 font-sans flex flex-col">
                 {!hideNavbar && <Navbar />}
                 <main className={hideNavbar ? 'flex-1' : 'flex-1'}>
